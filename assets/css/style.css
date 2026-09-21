@@ -28,6 +28,11 @@ body {
     cursor: pointer;
   }
 
+  img {
+    display: block;
+    max-width: 100%;
+  }
+
   h1,
   h2 {
     font-size: 36px;
@@ -45,43 +50,56 @@ body {
 
 header {
   display: flex;
+  align-items: center;
   justify-content: space-between;
   background-color: var(--color-primary);
   padding: 16px 16px;
+  color: var(--color-bg);
 
   a {
     display: flex;
     gap: 7px;
 
-    img {
-      width: 24px;
-      height: 24px;
-    }
+    .logo {
+      img {
+        width: 24px;
+        height: 24px;
+      }
 
-    span {
-      font-size: 1.25rem;
-      font-weight: bold;
-      color: var(--color-bg);
+      span {
+        font-size: 1.25rem;
+        font-weight: bold;
+        color: var(--color-bg);
+      }
     }
   }
 
   nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
     ul {
       display: none;
     }
 
-    display: flex;
-    justify-content: space-between;
+    .header-actions {
+      display: flex;
+      align-items: center;
 
-    .auth-btn {
-      display: none;
-    }
+      .header-auth {
+        display: none;
+      }
 
-    .menu-btn {
-      border: 0;
-      background: transparent;
-      color: white;
-      cursor: pointer;
+      .btn-menu {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border: 0;
+        background: transparent;
+        color: white;
+        cursor: pointer;
+      }
     }
   }
 }
@@ -89,39 +107,40 @@ header {
 main {
   text-align: center;
 
-  .dark-section,
-  .light-section {
-    padding: 80px 16px;
+  .section-dark,
+  .section-light {
     display: flex;
-    align-items: center;
     flex-direction: column;
+    align-items: center;
     gap: 100px;
+    padding: 80px 16px;
 
-    .content {
+    .section-content {
       display: flex;
       flex-direction: column;
       align-items: center;
       gap: 50px;
+      width: 100%;
     }
 
-    .text-block {
+    .section-text {
       display: flex;
       flex-direction: column;
       gap: 24px;
     }
   }
 
-  .dark-section {
+  .section-dark {
     color: var(--color-bg);
     background-color: var(--color-primary);
   }
 
-  .light-section {
+  .section-light {
     background-color: var(--color-bg);
     color: var(--color-text);
   }
 
-  .img-section {
+  .section-image {
     width: 100%;
   }
 }
@@ -132,7 +151,7 @@ main {
   gap: 100px;
 }
 
-.light-btn {
+.btn-primary {
   font-size: 18px;
   line-height: 30px;
   letter-spacing: -0.02em;
@@ -142,16 +161,17 @@ main {
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
 }
 
-.light-btn::after {
+.btn-primary::after {
   content: "arrow_forward";
   font-family: "Material Symbols Outlined";
   font-size: 20px;
+  line-height: 1;
 }
 
 .feature-card {
@@ -203,6 +223,7 @@ main {
   padding: 40px 44px;
   border-radius: 10px;
   max-width: 472px;
+  text-align: left;
 
   div {
     display: flex;
@@ -239,10 +260,10 @@ main {
   }
 }
 
-.quote-container {
+.client-card {
   display: flex;
   flex-direction: column;
-  text-align: start;
+  text-align: left;
   gap: 40px;
   border-radius: 10px;
   box-shadow: 15px 10px 50px rgba(0, 0, 0, 0.1);
@@ -256,7 +277,7 @@ main {
   padding-bottom: 40px;
 }
 
-.client {
+.author {
   display: grid;
   gap: 24px;
 
@@ -275,8 +296,9 @@ main {
 .free-trial {
   display: flex;
   flex-direction: column;
-  text-align: start;
+  text-align: left;
   gap: 40px;
+  width: 100%;
 
   .app-icon {
     display: flex;
@@ -291,7 +313,6 @@ footer {
   gap: 80px;
   padding: 140px 16px 32px 16px;
   background-color: var(--color-primary);
-  border-top: 1px solid #2e4e73;
 
   div {
     display: flex;
@@ -302,20 +323,19 @@ footer {
     color: var(--color-bg);
   }
 
-  .info {
+  .footer-info {
     display: flex;
     flex-direction: column;
     gap: 80px;
 
-    .logo-description {
+    .footer-brand {
       display: flex;
+      flex-direction: column;
+      align-items: center;
       gap: 24px;
+      text-align: center;
 
-      a {
-        display: flex;
-        align-items: center;
-        gap: 7px;
-
+      .logo {
         img {
           width: 37px;
           height: 29px;
@@ -323,7 +343,6 @@ footer {
 
         span {
           font-size: 28px;
-          font-weight: bold;
         }
       }
     }
@@ -332,13 +351,15 @@ footer {
       display: flex;
       flex-direction: column;
       align-items: center;
-      color: var(--color-bg);
       gap: 16px;
     }
 
-    .info-trybtn {
+    .footer-cta {
       display: flex;
+      flex-direction: column;
+      align-items: center;
       gap: 23px;
+      text-align: center;
     }
   }
 
@@ -353,14 +374,13 @@ footer {
     font-weight: 300;
   }
 
-  .language-container {
+  .language-switcher {
     display: flex;
-    flex-direction: row;
     align-items: center;
     gap: 6px;
 
     label {
-      display: flex;
+      display: inline-flex;
       align-items: center;
     }
 
@@ -368,12 +388,8 @@ footer {
       border: none;
       outline: none;
       background: transparent;
-
       color: var(--color-bg);
-      font-size: 16px;
-      font-family: "Inter";
       font-weight: 200;
-
       cursor: pointer;
 
       option {
@@ -383,21 +399,18 @@ footer {
     }
   }
 
-  .terms-section {
-    display: flex;
-    flex-direction: column;
+  .footer-bottom {
     align-items: center;
     gap: 20px;
-    color: var(--color-bg);
 
-    nav {
+    .social-links {
       display: flex;
-      gap: 32px;
       justify-content: center;
       align-items: center;
-      padding-top: 20px;
-      border-top: 1px solid #2e4e73;
+      gap: 32px;
       width: 100%;
+      padding-top: 20px;
+      border-top: 1px solid var(--color-border);
     }
   }
 }
@@ -412,16 +425,9 @@ footer {
   }
 
   header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     padding: 16px 32px;
 
-    a {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-
+    .logo {
       img {
         width: 37px;
         height: 29px;
@@ -437,15 +443,15 @@ footer {
         display: none;
       }
 
-      .header-btn {
+      .header-actions {
         display: flex;
         gap: 20px;
 
-        .auth-btn {
+        .header-auth {
           display: flex;
           gap: 24px;
 
-          #login-btn {
+          .btn-login {
             padding: 16px 40px;
             font-size: 18px;
             line-height: 30px;
@@ -464,173 +470,69 @@ footer {
   main {
     text-align: start;
 
-    .dark-section,
-    .light-section {
+    .section-dark,
+    .section-light {
       padding: 140px 32px;
       flex-direction: row;
 
-      .content {
-        align-items: start;
-        gap: 60;
+      .section-content {
+        align-items: flex-start;
+        flex: 1;
       }
 
-      .text-block {
-        display: flex;
-        flex-direction: column;
+      .section-image {
+        flex: 1;
       }
     }
 
-    .light-section {
-      .work-section {
-        display: flex;
-        flex-direction: column;
+    .section-light {
+      .work-list {
         gap: 100px;
 
         .work-item {
-          display: flex;
+          flex-direction: row;
+          gap: 60px;
+
+          .section-content, .section-image {
+            flex: 1;
+          }
         }
       }
 
-      .plan-container {
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        gap: 60px;
-
-        .plan-item {
-          display: flex;
-          gap: 32px;
+      .plans {
+        .plicing-grid {
+          grid-template-columns: repeat(3, minmax(0, 1fr));
         }
       }
 
-      .icon-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        gap: 100px;
+      .sponsors {
         width: 100%;
 
         .icons-list {
           display: flex;
+          align-items: center;
+          justify-content: space-between;
         }
       }
 
-      .client-container {
-        display: flex;
-        flex-direction: column;
-        gap: 60px;
-        text-align: center;
-        width: 100%;
-
-        .client-card {
-          display: flex;
-          gap: 32px;
+      .clients {
+        .client-grid {
+          grid-template-columns: repeat(3, minmax(0, 1fr));
         }
       }
     }
   }
 
   .pricing-card {
-    color: var(--color-text);
-    background-color: transparent;
-    border: 1px solid var(--color-secondary);
-    padding: 40px 44px;
-    border-radius: 10px;
     max-width: 472px;
-
-    div {
-      display: flex;
-      flex-direction: column;
-      gap: 25px;
-    }
-
-    ul > li {
-      img {
-        color: var(--color-text);
-      }
-    }
   }
 
   .feature-card {
-    text-align: initial;
-    color: var(--color-bg);
-    background-color: var(--color-primary);
-    padding: 80px 44px;
-    border-radius: 10px;
+    padding-block: 80px;
 
-    div {
-      display: flex;
-      flex-direction: column;
-      gap: 25px;
-    }
-
-    h3 {
-      font-size: 24px;
-      line-height: 36px;
-    }
-
-    .price {
-      font-size: 36px;
-      font-weight: bold;
-    }
-
-    ul {
-      display: flex;
-      flex-direction: column;
-      gap: 28px;
-      margin-block: 25px;
-    }
-
-    ul > li {
-      display: flex;
-      align-items: center;
-      gap: 19px;
-      list-style: none;
-      img {
-        width: 18px;
-        height: 18px;
-      }
-    }
-  }
-
-  .quote-container {
-    display: flex;
-    flex-direction: column;
-    text-align: start;
-    gap: 40px;
-    border-radius: 10px;
-    box-shadow: 15px 10px 50px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-  }
-
-  .quote {
-    display: grid;
-    gap: 32px;
-    border-bottom: 1px solid #212529;
-    padding-bottom: 40px;
-  }
-
-  .client {
-    display: grid;
-    gap: 24px;
-
-    span {
-      font-size: 18px;
-      font-weight: bold;
-    }
-
-    div {
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-    }
   }
 
   .free-trial {
-    width: 100%;
-    justify-content: center;
     align-items: center;
     text-align: center;
 
@@ -646,28 +548,27 @@ footer {
     gap: 100px;
     padding: 140px 32px 32px 32px;
 
-    div,
-    .logo-description,
-    .info-trybtn {
-      align-items: flex-start;
-      text-align: left;
-    }
-
-    .info {
+    .footer-info {
       flex-direction: row;
       justify-content: space-between;
+      align-items: flex-start;
 
       .footer-links {
         align-items: flex-start;
         text-align: left;
       }
 
-      .logo-description {
-        flex-direction: column;
+      .footer-brand {
+        align-items: flex-start;
+        max-width: 280px;
+        text-align: left;
       }
 
-      .info-trybtn {
+      .footer-cta {
+        align-items: flex-start;
         width: 100%;
+        max-width: 280px;
+        text-align: left;
 
         h2 {
           font-size: 28px;
@@ -675,13 +576,13 @@ footer {
       }
     }
 
-    .terms-section {
+    .footer-bottom {
       flex-direction: row;
-      align-items: center;
+      gap: 20px;
       justify-content: space-between;
       width: 100%;
 
-      nav {
+      .social-links {
         width: auto;
         padding-top: 0;
         border-top: none;
@@ -705,23 +606,9 @@ footer {
     justify-content: space-between;
     padding: 16px 220px;
 
-    a {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-
-      img {
-        width: 37px;
-        height: 29px;
-      }
-
-      span {
-        font-size: 28px;
-      }
-    }
-
     nav {
       gap: 60px;
+
       ul {
         display: flex;
         align-items: center;
@@ -729,25 +616,13 @@ footer {
         gap: 32px;
       }
 
-      .header-btn {
+      .header-actions {
         display: flex;
         gap: 20px;
 
-        .auth-btn {
+        .header-auth {
           display: flex;
           gap: 24px;
-
-          #login-btn {
-            padding: 16px 40px;
-            font-size: 18px;
-            line-height: 30px;
-            letter-spacing: -0.02em;
-            color: var(--color-primary);
-            background-color: var(--color-secondary);
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-          }
         }
 
         .menu-btn {
@@ -760,237 +635,42 @@ footer {
   main {
     text-align: start;
 
-    .dark-section,
-    .light-section {
+    .section-dark,
+    .section-light {
       padding: 140px 220px;
       flex-direction: row;
 
-      .content {
-        display: flex;
+      .section-content {
         justify-content: center;
-        width: 100%;
-      }
-
-      .text-block {
-        display: flex;
-        flex-direction: column;
       }
     }
 
-    .light-section {
-      .work-section {
-        display: flex;
-        flex-direction: column;
-        gap: 100px;
-
+    .section-light {
+      .work-list {
         .work-item {
-          display: flex;
           gap: 60px;
         }
       }
-
-      .plan-container {
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        gap: 60px;
-
-        .plan-item {
-          display: flex;
-          gap: 32px;
-        }
-      }
-
-      .icon-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        gap: 100px;
-        width: 100%;
-
-        .icons-list {
-          display: flex;
-        }
-      }
-
-      .client-container {
-        display: flex;
-        flex-direction: column;
-        gap: 60px;
-        text-align: center;
-        width: 100%;
-
-        .client-card {
-          display: flex;
-          gap: 32px;
-        }
-      }
     }
   }
-
-  .pricing-card {
-    color: var(--color-text);
-    background-color: transparent;
-    border: 1px solid var(--color-secondary);
-    padding: 40px 44px;
-    border-radius: 10px;
-    max-width: 472px;
-
-    div {
-      display: flex;
-      flex-direction: column;
-      gap: 25px;
-    }
-
-    ul > li {
-      img {
-        color: var(--color-text);
-      }
-    }
-  }
-
-  .feature-card {
-    text-align: initial;
-    color: var(--color-bg);
-    background-color: var(--color-primary);
-    padding: 80px 44px;
-    border-radius: 10px;
-
-    div {
-      display: flex;
-      flex-direction: column;
-      gap: 25px;
-    }
-
-    h3 {
-      font-size: 24px;
-      line-height: 36px;
-    }
-
-    .price {
-      font-size: 36px;
-      font-weight: bold;
-    }
-
-    ul {
-      display: flex;
-      flex-direction: column;
-      gap: 28px;
-      margin-block: 25px;
-    }
-
-    ul > li {
-      display: flex;
-      align-items: center;
-      gap: 19px;
-      list-style: none;
-      img {
-        width: 18px;
-        height: 18px;
-      }
-    }
-  }
-
-  .quote-container {
-    display: flex;
-    flex-direction: column;
-    text-align: start;
-    gap: 40px;
-    border-radius: 10px;
-    box-shadow: 15px 10px 50px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-  }
-
-  .quote {
-    display: grid;
-    gap: 32px;
-    border-bottom: 1px solid #212529;
-    padding-bottom: 40px;
-  }
-
-  .client {
-    display: grid;
-    gap: 24px;
-
-    span {
-      font-size: 18px;
-      font-weight: bold;
-    }
-
-    div {
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-    }
-  }
-
-  .free-trial {
-    width: 100%;
-    align-items: center;
-
-    .text-block {
-      text-align: center;
-      width: 100%;
-      align-items: center;
-    }
-
-    .app-icon {
-      img {
-        width: 60px;
-        height: 60px;
-      }
-    }
-  }
-
+  
   footer {
-    gap: 100px;
-    padding: 140px 220px 32px 220px;
 
-    div,
-    .logo-description,
-    .info-trybtn {
-      align-items: flex-start;
-      text-align: left;
-    }
-
-    .info {
-      flex-direction: row;
-      justify-content: space-between;
-
-      .footer-links {
-        align-items: flex-start;
-        text-align: left;
-      }
-
-      .logo-description {
-        flex-direction: column;
+    .footer-info {
+      .footer-brand {
         max-width: 280px;
       }
 
-      .info-trybtn {
+      .footer-cta {
         width: auto;
-        max-width: 280px;
-
-        h2 {
-          font-size: 28px;
-        }
       }
     }
 
-    .terms-section {
-      flex-direction: row;
-      align-items: center;
+    .footer-bottom {
       justify-content: flex-start;
-      width: 100%;
       gap: 60px;
 
-      nav {
-        width: auto;
-        padding-top: 0;
-        border-top: none;
-        justify-content: flex-end;
+      .social-links {
         margin-left: auto;
       }
     }
