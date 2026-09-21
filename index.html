@@ -2,8 +2,11 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <meta
+      name="viewport"
+      section-content="width=device-width, initial-scale=1.0"
+    />
+    <title>Whitepace</title>
     <link rel="stylesheet" href="./assets/css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -18,75 +21,95 @@
   </head>
   <body>
     <header>
+      <a href="#" class="logo">
+        <img src="./assets/images/logo-whitepace.svg" alt="whitepace logo" />
+        <span>whitepace</span>
+      </a>
+
       <nav>
-        <a href="#" class="logo">
-          <img src="./assets/images/logo-whitepace.svg" alt="whitepace logo" />
-          <span>whitepace</span>
-        </a>
-        <button class="menu-btn"><span class="material-symbols-outlined"> menu </span></button>
+        <ul>
+          <li><a href="#">Products</a></li>
+          <li><a href="#">Solutions</a></li>
+          <li><a href="#">Resources</a></li>
+          <li><a href="#">Pricing</a></li>
+        </ul>
+
+        <div class="header-actions">
+          <div class="header-auth">
+            <button class="btn-login">Login</button>
+            <button class="btn-primary">Try Whitepace free</button>
+          </div>
+          <button class="btn-menu">
+            <span class="material-symbols-outlined"> menu </span>
+          </button>
+        </div>
       </nav>
     </header>
 
     <main>
-      <section class="dark-section">
-        <div class="content">
-          <div class="text-block">
+      <section class="section-dark">
+        <div class="section-content">
+          <div class="section-text">
             <h1>Get More Done with whitepace</h1>
             <p>
               Project management software that enables your teams to
               collaborate, plan, analyze and manage everyday tasks
             </p>
           </div>
-          <button class="light-btn">Try TasKey Free</button>
+          <button class="btn-primary">Try TasKey Free</button>
         </div>
         <img
-          class="img-section"
+          class="section-image"
           src="./assets/images/image-container.svg"
           alt=""
         />
       </section>
 
-      <section class="light-section">
-        <div class="content">
-          <div class="text-block">
-            <h2>Project Management</h2>
-            <p>
-              Images, videos, PDFs and audio files are supported. Create math
-              expressions and diagrams directly from the app. Take photos with
-              the mobile app and save them to a note.
-            </p>
-          </div>
+      <section class="section-light">
+        <div class="work-list">
+          <article class="work-item">
+            <div class="section-content">
+              <div class="section-text">
+                <h2>Project Management</h2>
+                <p>
+                  Images, videos, PDFs and audio files are supported. Create
+                  math expressions and diagrams directly from the app. Take
+                  photos with the mobile app and save them to a note.
+                </p>
+              </div>
+              <button class="btn-primary">Get Started</button>
+            </div>
+            <img
+              class="section-image"
+              src="./assets/images/image-container.svg"
+              alt=""
+            />
+          </article>
 
-          <button class="light-btn">Get Started</button>
+          <article class="work-item">
+            <img
+              class="section-image"
+              src="./assets/images/work-together-image.svg"
+              alt=""
+            />
+            <div class="section-content">
+              <div class="section-text">
+                <h2>Work together</h2>
+                <p>
+                  With whitepace, share your notes with your colleagues and
+                  collaborate on them. You can also publish a note to the
+                  internet and share the URL with others.
+                </p>
+              </div>
+              <button class="btn-primary">Try it now</button>
+            </div>
+          </article>
         </div>
-
-        <img
-          class="img-section"
-          src="./assets/images/image-container.svg"
-          alt=""
-        />
-
-        <div class="content">
-          <div class="text-block">
-            <h2>Work together</h2>
-            <p>
-              With whitepace, share your notes with your colleagues and
-              collaborate on them. You can also publish a note to the internet
-              and share the URL with others.
-            </p>
-          </div>
-          <button class="light-btn">Try it now</button>
-        </div>
-        <img
-          class="img-section"
-          src="./assets/images/work-together-image.svg"
-          alt=""
-        />
       </section>
 
-      <section class="dark-section">
-        <div class="content">
-          <div class="text-block">
+      <section class="section-dark" style="display: flex; gap: 98px">
+        <div class="section-content">
+          <div class="section-text">
             <h2>Use as Extension</h2>
             <p>
               Customise the app with plugins, custom themes and multiple text
@@ -94,23 +117,23 @@
               plugins using the Extension API.
             </p>
           </div>
-          <button class="light-btn">Let's Go</button>
+          <button class="btn-primary">Let's Go</button>
         </div>
         <img
-          class="img-section"
+          class="section-image"
           src="./assets/images/image-container.svg"
           alt=""
         />
       </section>
 
-      <section class="light-section">
+      <section class="section-light">
         <img
-          class="img-section"
+          class="section-image"
           src="./assets/images/image-container.svg"
           alt=""
         />
-        <div class="content">
-          <div class="text-block">
+        <div class="section-content">
+          <div class="section-text">
             <h2>Customise it to your needs</h2>
             <p>
               Customise the app with plugins, custom themes and multiple text
@@ -118,59 +141,135 @@
               plugins using the Extension API.
             </p>
           </div>
-          <button class="light-btn">Let's Go</button>
+          <button class="btn-primary">Let's Go</button>
         </div>
       </section>
 
-      <section class="light-section">
-        <div class="text-block">
-          <h2>Choose Your Plan</h2>
-          <p>
-            Whether you want to get organized, keep your personal life on track,
-            or boost workplace productivity, Evernote has the right plan for
-            you.
-          </p>
-        </div>
-        <!-- Fazer animação dos os cards aqui -->
-        <article class="pricing-card">
-          <div>
-            <h3>Personal</h3>
-            <p class="price">$11.2</p>
-            <p>Keep home and family on track</p>
+      <section class="section-light">
+        <div class="plans">
+          <div class="section-text">
+            <h2>Choose Your Plan</h2>
+            <p>
+              Whether you want to get organized, keep your personal life on
+              track, or boost workplace productivity, Evernote has the right
+              plan for you.
+            </p>
           </div>
-          <ul>
-            <li>
-              <img src="./assets/images/point-icon.svg" alt="" />
-              <span>Sync unlimited devices<span>
-            </li>
-            <li>
-              <img src="./assets/images/point-icon.svg" alt="" />
-              <span>10 GB monthly uploads<span>
-            </li>
-            <li>
-              <img src="./assets/images/point-icon.svg" alt="" />
-              <span>200 MB max. note size<span>
-            </li>
-            <li>
-              <img src="./assets/images/point-icon.svg" alt="" />
-              <span>Customize Home dashboard and access extra widgets<span>
-            </li>
-            <li>
-              <img src="./assets/images/point-icon.svg" alt="" />
-              <span>Connect primary Google Calendar account<span>
-            </li>
-            <li>
-              <img src="./assets/images/point-icon.svg" alt="" />
-              <span>Add due dates, reminders, and notifications to your tasks<span>
-            </li>
-          </ul>
-          <button class="light-btn">Get Started</button>
-        </article>
+
+          <!-- Fazer animação dos os cards aqui -->
+
+          <div class="plicing-grid">
+            <article class="pricing-card">
+              <div class="pricing-header">
+                <h3>Free</h3>
+                <p class="price">$0</p>
+                <p>Capture ideas and find them quickly</p>
+              </div>
+              <ul>
+                <li>
+                  <img src="./assets/images/point-icon.svg" alt="" />Sync
+                  unlimited devices
+                </li>
+                <li>
+                  <img src="./assets/images/point-icon.svg" alt="" />10 GB
+                  monthly uploads
+                </li>
+                <li>
+                  <img src="./assets/images/point-icon.svg" alt="" />200 MB max.
+                  note size
+                </li>
+                <li>
+                  <img src="./assets/images/point-icon.svg" alt="" />Customize
+                  Home dashboard and access extra widgets
+                </li>
+                <li>
+                  <img src="./assets/images/point-icon.svg" alt="" />Connect
+                  primary Google Calendar account
+                </li>
+                <li>
+                  <img src="./assets/images/point-icon.svg" alt="" />Add due
+                  dates, reminders, and notifications to yourtasks
+                </li>
+              </ul>
+              <button class="btn-primary">Get Started</button>
+            </article>
+
+            <article class="pricing-card feature-card">
+              <div class="pricing-header">
+                <h3>Personal</h3>
+                <p class="price">$11.2</p>
+                <p>Keep home and family on track</p>
+              </div>
+              <ul>
+                <li>
+                  <img src="./assets/images/point-icon.svg" alt="" />
+                  Sync unlimited devices
+                </li>
+                <li>
+                  <img src="./assets/images/point-icon.svg" alt="" />
+                  10 GB monthly uploads
+                </li>
+                <li>
+                  <img src="./assets/images/point-icon.svg" alt="" />
+                  200 MB max. note size
+                </li>
+                <li>
+                  <img src="./assets/images/point-icon.svg" alt="" />
+                  Customize Home dashboard and access extra widgets
+                </li>
+                <li>
+                  <img src="./assets/images/point-icon.svg" alt="" />
+                  Connect primary Google Calendar account
+                </li>
+                <li>
+                  <img src="./assets/images/point-icon.svg" alt="" />Add due
+                  dates, reminders, and notifications to your tasks
+                </li>
+              </ul>
+              <button class="btn-primary">Get Started</button>
+            </article>
+
+            <article class="pricing-card">
+              <div class="pricing-header">
+                <h3>Organization</h3>
+                <p class="price">$49.99</p>
+                <p>Capture ideas and find them quickly</p>
+              </div>
+              <ul>
+                <li>
+                  <img src="./assets/images/point-icon.svg" alt="" />
+                  Sync unlimited devices
+                </li>
+                <li>
+                  <img src="./assets/images/point-icon.svg" alt="" />
+                  10 GB monthly uploads
+                </li>
+                <li>
+                  <img src="./assets/images/point-icon.svg" alt="" />
+                  200 MB max. note size
+                </li>
+                <li>
+                  <img src="./assets/images/point-icon.svg" alt="" />
+                  Customize Home dashboard and access extra widgets
+                </li>
+                <li>
+                  <img src="./assets/images/point-icon.svg" alt="" />
+                  Connect primary Google Calendar account
+                </li>
+                <li>
+                  <img src="./assets/images/point-icon.svg" alt="" />Add due
+                  dates, reminders, and notifications to your tasks
+                </li>
+              </ul>
+              <button class="btn-primary">Get Started</button>
+            </article>
+          </div>
+        </div>
       </section>
 
-      <section class="dark-section" style="text-align: start">
-        <div class="content">
-          <div class="text-block">
+      <section class="section-dark">
+        <div class="free-trial">
+          <div class="section-text">
             <h2>Your work, everywhere you are</h2>
             <p>
               Access your notes from your computer, phone or tablet by
@@ -179,14 +278,16 @@
               Android and iOS. A terminal app is also available!
             </p>
           </div>
-          <button class="light-btn">Try Taskey</button>
+          <div>
+            <button class="btn-primary">Try Taskey</button>
+          </div>
         </div>
       </section>
 
-      <section class="light-section">
-        <img class="img-section" src="./assets/images/element.svg" alt="" />
-        <div class="content">
-          <div class="text-block">
+      <section class="section-light">
+        <img class="section-image" src="./assets/images/element.svg" alt="" />
+        <div class="section-content">
+          <div class="section-text">
             <h2>100% your data</h2>
             <p>
               The app is open source and your notes are saved to an open format,
@@ -195,24 +296,27 @@
               access them.
             </p>
           </div>
-          <button class="light-btn">Read more</button>
+          <button class="btn-primary">Read more</button>
         </div>
       </section>
 
-      <section class="light-section">
-        <h2>Our sponsors</h2>
-        <div class="icons-list">
-          <img src="./assets/images/apple.svg" alt="Apple Logo" />
-          <img src="./assets/images/microsoft.svg" alt="Microsoft Logo" />
-          <img src="./assets/images/slack.svg" alt="Slack Logo" />
-          <img src="./assets/images/google.svg" alt="Google Logo" />
+      <section class="section-light">
+        <div class="sponsors">
+          <h2>Our sponsors</h2>
+
+          <div class="icons-list">
+            <img src="./assets/images/apple.svg" alt="Apple Logo" />
+            <img src="./assets/images/microsoft.svg" alt="Microsoft Logo" />
+            <img src="./assets/images/slack.svg" alt="Slack Logo" />
+            <img src="./assets/images/google.svg" alt="Google Logo" />
+          </div>
         </div>
       </section>
 
-      <section class="dark-section">
-        <img class="img-section" src="./assets/images/apps.svg" alt="" />
-        <div class="content">
-          <div class="text-block">
+      <section class="section-dark">
+        <img class="section-image" src="./assets/images/apps.svg" alt="" />
+        <div class="section-content">
+          <div class="section-text">
             <h2>Work with Your Favorites Apps Using whitepace</h2>
             <p>
               Whitepace teams up with your favorite software. Integrate with
@@ -220,40 +324,80 @@
               your project success.
             </p>
           </div>
-          <button class="light-btn">Read more</button>
+          <button class="btn-primary">Read more</button>
         </div>
       </section>
 
-      <section class="light-section">
-        <h2>What Our Clients Says</h2>
-        <div class="quote-container">
-          <div class="quote">
-            <img src="./assets/images/quote.svg" alt="Quote" />
-            <p>
-              Taskkey is designed as a collaboration tool for businesses that is
-              a full project management solution.
-            </p>
-          </div>
-          <div class="client">
-            <img src="./assets/images/avatar.svg" alt="avatar" />
-            <div>
-              <span>Oberon Shaw, MCH</span>
-              <p>Head of Talent Acquisition, North America</p>
-            </div>
+      <section class="section-light">
+        <div class="clients">
+          <h2>What Our Clients Says</h2>
+          <div class="client-grid">
+            <article class="client-card">
+              <div class="quote">
+                <img src="./assets/images/quote.svg" alt="Quote" />
+                <p>
+                  Whitepate is designed as a collaboration tool for businesses
+                  that is a full project management solution.
+                </p>
+              </div>
+
+              <div class="author">
+                <img src="./assets/images/avatar.svg" alt="avatar" />
+                <div>
+                  <span>Oberon Shaw, MCH</span>
+                  <p>Head of Talent Acquisition, North America</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="client-card">
+              <div class="quote">
+                <img src="./assets/images/quote.svg" alt="Quote" />
+                <p>
+                  Whitepate is designed as a collaboration tool for businesses
+                  that is a full project management solution.
+                </p>
+              </div>
+              <div class="autor">
+                <img src="./assets/images/avatar.svg" alt="avatar" />
+                <div>
+                  <span>Oberon Shaw, MCH</span>
+                  <p>Head of Talent Acquisition, North America</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="client-card">
+              <div class="quote">
+                <img src="./assets/images/quote.svg" alt="Quote" />
+                <p>
+                  Whitepate is designed as a collaboration tool for businesses
+                  that is a full project management solution.
+                </p>
+              </div>
+              <div class="autor">
+                <img src="./assets/images/avatar.svg" alt="avatar" />
+                <div>
+                  <span>Oberon Shaw, MCH</span>
+                  <p>Head of Talent Acquisition, North America</p>
+                </div>
+              </div>
+            </article>
           </div>
         </div>
       </section>
 
-      <section class="dark-section" style="padding: 80px 16px 32px 16px">
+      <section class="section-dark">
         <div class="free-trial">
-          <div class="text-block">
+          <div class="section-text">
             <h2>Try Whitepace today</h2>
             <p>Get started for free. Add your whole team as your needs grow.</p>
           </div>
-          <div>
-            <button class="light-btn">Try Taskey free</button>
-          </div>
+
+          <button class="btn-primary">Try Taskey free</button>
+
           <p>On a big team? Contact sales</p>
+
           <div class="app-icon">
             <img src="./assets/images/apple-white.svg" alt="Apple Icon" />
             <img src="./assets/images/windows.svg" alt="Windows Icon" />
@@ -264,8 +408,8 @@
     </main>
 
     <footer>
-      <section class="info">
-        <div class="logo-description">
+      <section class="footer-info">
+        <div class="footer-brand">
           <a href="#" class="logo">
             <img
               src="./assets/images/logo-whitepace.svg"
@@ -300,15 +444,15 @@
           <a href="#">Media kit</a>
         </nav>
 
-        <div class="info-trybtn">
+        <div class="footer-cta">
           <h2>Try It Today</h2>
           <p>Get started for free. Add your whole team as your needs grow.</p>
-          <button class="light-btn">Start today</button>
+          <button class="btn-primary">Start today</button>
         </div>
       </section>
 
-      <section class="terms-section">
-        <div class="language-container">
+      <section class="footer-bottom">
+        <div class="language-switcher">
           <label for="language">
             <span class="material-symbols-outlined"> language </span>
           </label>
@@ -324,7 +468,7 @@
         <a href="#">Status</a>
         <p>©2021 Whitepace LLC.</p>
 
-        <nav>
+        <nav class="social-links">
           <a href="#">
             <img src="./assets/images/facebook.svg" alt="Facebook" />
           </a>
